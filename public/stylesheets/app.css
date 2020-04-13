@@ -1,0 +1,11 @@
+i.icon{
+	font-size:2em;
+}
+
+.container.main{    /*change the position of this container, in new.ejs, we only targetting this type of container */
+	margin-top: 7em;
+}
+
+.edit_delete_same_line{
+	display: inline;
+}

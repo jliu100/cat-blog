@@ -1,0 +1,23 @@
+<% include ./partials/header %> <!-- header.ejs -->
+<div class="ui main text container segment">  
+	<div class="ui huge header">Edit: <%= blog.title %> </div>  <!-- big header in web -->
+	<form class="ui form" action="/blogs/<%= blog._id %>?_method=PUT" method="POST"> <!-- for updata post: method is POST but, ?_method=PUT will override the POST method, and the action is return to route:  blog/id page
+
+	***We have to install: npm install method-override --save in Git Bash to use override method, and we have to include that in app.js (line 2) and tell app to use it (line 12)***-->
+		<div class="frame">
+			<label>Title</label>
+			<input type="text" name="blog[title]" value="<%= blog.title %>">
+		</div>
+		<div class="frame">
+			<label>Image</label>
+			<input type="text" name="blog[image]" value="<%= blog.image %>">
+		</div>
+		<div class="frame">
+			<label>Content</label>
+			<textarea name="blog[body]"> <%= blog.body %> </textarea> <!-- since we dont have value attribute for textarea just put <%= blog.image %> inside -->
+		</div>
+		<input class= "ui button" type="submit">	
+	</form>
+
+</div>
+<% include ./partials/footer %> <!-- footer.ejs -->

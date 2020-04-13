@@ -1,0 +1,21 @@
+<% include ./partials/header %> <!-- header.ejs -->
+<div class="ui main text container segment">  <!-- use ui: to change location of this container, and put little border around it-->
+	<div class="ui huge header">New Blog</div>  <!-- big header in web -->
+	<form class="ui form" action="/blogs" method="POST"> <!-- will go to app.js and find specific route that has a post method and has a same route name"/blogs"-->
+		<div class="frame">
+			<label>Title</label>
+			<input type="text" name="blog[title]" placeholder="title">
+		</div>
+		<div class="frame">
+			<label>Image</label>
+			<input type="text" name="blog[image]" placeholder="image">
+		</div>
+		<div class="frame">
+			<label>Content</label>
+			<textarea name="blog[body]"></textarea>
+		</div>
+		<input class= "ui button" type="submit">	
+	</form>
+
+</div>
+<% include ./partials/footer %> <!-- footer.ejs -->
