@@ -6,9 +6,9 @@ app = express();
 
 
 
-// mongoose.connect("mongodb+srv://admin-jin:1011@cluster0-eoevk.mongodb.net/<Name OF DB>", { useNewUrlParser: true })
+
 //APP CONFIG
-mongoose.connect("mongodb+srv://admin-jin:1011@cluster0-eoevk.mongodb.net/restful_blog_app", { useNewUrlParser: true }) // if find restful_blog app will get things inside this, but if not, it will create one
+mongoose.connect("", { useNewUrlParser: true }) // if find restful_blog app will get things inside this, but if not, it will create one
 app.set("view engine", "ejs");
 app.use(express.static("public"));
 app.use(bodyParser.urlencoded({extended:true}));
